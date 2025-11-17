@@ -1,0 +1,89 @@
+/* comentário */
+
+/*
+Para quem baixar uma fonte do DaFonte, depois troca no body a fontfamily
+@font-face {
+    font-family: "daisy";
+    src: url('./assets/nomedafonte) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}*/
+
+body {
+    font-family: Arial, sans-serif; /* Fonte e família usada para o curriculo */
+    background-color: gray; /* cor do fundo */
+    margin: 0; /* Remove a margem padrão do navegador */
+    padding: 0; /* Remove o espaçamento interno padrão do navegador*/
+}
+
+.container {
+    max-width: 900px; /*Largura máxima do currículo*/
+    margin: 40px auto;
+    background-color: white; /* cor principal do currículo*/
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0.1); /*Estabeleci uma sombra abaixo do Container*/
+    border-radius: 10px; /* Arredondar as bordas do Container */
+    
+}
+.header {
+    text-align: center; /*Centraliza todo o conteúdo */
+    margin-bottom: 20px; /* Coloca um espaço abaixo do cabeçalho */
+}
+
+/* Informações do cabeçalho */
+.header p{
+    margin: 2px 0;
+    color: #555;
+}
+
+h2 {
+    color: #2b6cb0; /* Cor azul do título */
+    border-bottom: 2px solid #2b6cb0; /* Linha azul abaixo do título */
+    padding-bottom: 5px; /* Espaço entre o texto e a linha */
+    margin-top: 30px; /* Espaço acima de cada seção */
+}
+
+p,
+li {
+    text-align: justify; /* Justifica o texto */
+    line-height: 1.6; /* Aumenta o espaçamento entre os tópicos */
+}
+
+ul{
+    list-style: none; /* Remove os marcadores */
+    padding: 0; /* Remove os pespaçamentos */
+}
+ul li::before{
+    content: "• "; /* Insere uma bolinha antes da lista */
+    color: #2b6cb0; /* cor da bolinha */
+    font-weight: bold; /* Deixa a bolinha mais espessa - opcional*/
+}
+
+.button {
+    display: flex; /* Fica flexível dependendo do dispositivo */
+    justify-content: flex-end; /* Alinha todo o conteúdo a direita */
+}
+
+#bnt-print{
+    background-color: #2b6cb0;
+    color: white;
+    border: none; /* retira a borda*/
+    padding: 10px 20px; /* Área clícável */
+    cursor: pointer; /* Cursor de mãozinha */
+    font-size: 16px; /* tamanho do texto */
+    border-radius: 5px /* canto arredondado */
+}
+
+#btn-print:hover{
+    background-color: #555;
+}
+
+/* Regras que se aplicam apenas na impressão (ao clicar o botão) */
+@media print{
+    #btn-print{
+        display: none; /* Retira o botão da Impressão */
+        visibility: hidden; /*oculta o botão na impressão */
+    }
+}
+
+/* Deem o Go Live para visualizar as mudanças */
